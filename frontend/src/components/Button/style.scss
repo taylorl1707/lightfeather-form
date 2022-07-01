@@ -1,0 +1,22 @@
+@import 'styles/variables.scss';
+
+.button-container {
+  cursor: pointer;
+  background-color: $color-dark;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 30px;
+
+  border: 0px;
+  border-radius: 3px;
+
+  &:active {
+    background-color: $color-active;
+  }
+
+  &:disabled {
+    background-color: $color-active;
+    cursor: not-allowed;
+  }
+}

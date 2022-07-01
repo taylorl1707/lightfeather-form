@@ -1,0 +1,25 @@
+version: '3.0'
+
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    ports:
+      - 8080:8080
+    links:
+      - frontend
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    volumes:
+      - './frontend:/app'
+      - '/app/node_modules'
+    ports:
+      - 3000:3000
+    environment:
+      - REACT_APP_API_URI=http://localhost:8080/api

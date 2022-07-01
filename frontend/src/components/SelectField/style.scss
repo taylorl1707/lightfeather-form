@@ -1,0 +1,45 @@
+@import 'styles/variables.scss';
+
+.select-field {
+  width: 100%;
+  margin-bottom: 2rem;
+
+  &.full {
+    width: 100%;
+  }
+
+  &.half {
+    width: 50%;
+  }
+
+  .select-label {
+    p {
+      margin: 10px 0px;
+      color: $color-text;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  .select-box {
+    width: 100%;
+    padding: 8px 8px;
+    border: 0;
+    border-radius: 3px;
+    outline: none;
+
+    color: $color-dark;
+
+    &:active {
+      outline: none;
+    }
+  }
+
+  .input-error {
+    font-size: 12px;
+    height: 14px;
+    font-style: italic;
+    color: red;
+    margin-top: 2px;
+  }
+}
